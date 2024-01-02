@@ -14,15 +14,3 @@ function UnityUrlFix(url) {
 	
 	return url;
 }
-
-function fixGameView() {
-	console.log("--fixGameView--");
-  const gameView= document.getElementsByClassName("webgl-content");
-  if (gameView) {
-  	console.log("--fixGameView--", gameView);
-  	if (gameView.clientHeight> gameView.clientWidth) {
-      gameView.style.height= Math.floor(gameView.clientWidth)+ "px";
-  	}
-  }
-}
-window.addEventListener("resize", fixGameView);
